@@ -1,4 +1,4 @@
-package L04_Prototype.homework;
+package L05_Prototype.homework;
 
 public class Cabinet implements Cloneable {
 

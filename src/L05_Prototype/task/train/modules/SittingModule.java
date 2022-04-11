@@ -1,6 +1,6 @@
-package L04_Prototype.task.train.modules;
+package L05_Prototype.task.train.modules;
 
-import L04_Prototype.task.train.astractions.CarriageModule;
+import L05_Prototype.task.train.astractions.CarriageModule;
 
 public class SittingModule extends CarriageModule {
 

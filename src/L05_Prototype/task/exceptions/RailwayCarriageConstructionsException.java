@@ -1,4 +1,4 @@
-package L04_Prototype.task.exceptions;
+package L05_Prototype.task.exceptions;
 
 public class RailwayCarriageConstructionsException extends RuntimeException {
 

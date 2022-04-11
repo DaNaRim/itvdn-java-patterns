@@ -1,6 +1,6 @@
-package L04_Prototype.task.train.astractions;
+package L05_Prototype.task.train.astractions;
 
-import L04_Prototype.task.exceptions.RailwayCarriageConstructionsException;
+import L05_Prototype.task.exceptions.RailwayCarriageConstructionsException;
 
 import java.util.Arrays;
 import java.util.Objects;

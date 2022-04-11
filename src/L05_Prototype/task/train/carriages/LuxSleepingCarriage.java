@@ -1,8 +1,8 @@
-package L04_Prototype.task.train.carriages;
+package L05_Prototype.task.train.carriages;
 
-import L04_Prototype.task.train.astractions.CarriageModule;
-import L04_Prototype.task.train.astractions.RailwayCarriage;
-import L04_Prototype.task.train.modules.LuxSleepingModule;
+import L05_Prototype.task.train.astractions.CarriageModule;
+import L05_Prototype.task.train.astractions.RailwayCarriage;
+import L05_Prototype.task.train.modules.LuxSleepingModule;
 
 import java.io.Serializable;
 
