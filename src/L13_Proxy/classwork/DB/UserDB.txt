@@ -1,0 +1,2 @@
+User{id=1, name='John Doe', password='qwerty123'}
+User{id=2, name='Jane Doe', password='0123456789'}
