@@ -7,10 +7,10 @@ import java.util.List;
 
 public class MinecraftDisk extends GameDisk {
 
-    private static final List<Game> games = List.of(new Minecraft());
+    private static final List<Game> GAMES = List.of(new Minecraft());
 
     @Override
     public List<Game> getGamesList() {
-        return games;
+        return GAMES;
     }
 }

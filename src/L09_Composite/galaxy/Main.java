@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
 
         List<Planet> planets1 = List.of(

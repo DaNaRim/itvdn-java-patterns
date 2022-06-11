@@ -2,9 +2,9 @@ package L10_Decorator.decorator.abstractMunchkin;
 
 public interface Munchkin {
 
-    int strength = 1;
-    int magic = 1;
-    int healthPoints = 1;
+    int STRENGTH = 1;
+    int MAGIC = 1;
+    int HEALTH_POINTS = 1;
 
     int getStrength();
 

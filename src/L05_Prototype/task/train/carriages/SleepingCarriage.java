@@ -4,7 +4,7 @@ import L05_Prototype.task.train.astractions.CarriageModule;
 import L05_Prototype.task.train.astractions.RailwayCarriage;
 import L05_Prototype.task.train.modules.SleepingModule;
 
-public class SleepingCarriage extends RailwayCarriage implements Cloneable{
+public class SleepingCarriage extends RailwayCarriage implements Cloneable {
 
     public SleepingCarriage() {
         super();
@@ -18,7 +18,7 @@ public class SleepingCarriage extends RailwayCarriage implements Cloneable{
 
     private void setModules() {
         CarriageModule module = new SleepingModule();
-        for(int i = 0; i < this.getModuleCapacity(); i++) {
+        for (int i = 0; i < this.getModuleCapacity(); i++) {
             this.getModuleArray()[i] = module.getClone();
         }
     }

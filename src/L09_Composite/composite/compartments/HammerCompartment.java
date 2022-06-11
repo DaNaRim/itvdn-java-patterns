@@ -5,7 +5,7 @@ import L09_Composite.composite.tools.Tools;
 
 public class HammerCompartment implements iToolCompartment {
 
-    Tools tool = Tools.HAMMER;
+    private final Tools tool = Tools.HAMMER;
 
     @Override
     public void printToolCompartmentAssignment() {

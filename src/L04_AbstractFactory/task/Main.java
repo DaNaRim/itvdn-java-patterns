@@ -7,6 +7,7 @@ import L04_AbstractFactory.task.vehicles.factories.tmp.VehicleFactory;
 import L04_AbstractFactory.task.vehicles.wheels.GearType;
 
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("Vehicle Plant");
 

@@ -12,7 +12,7 @@ public class HTTPAuthenticationMethodProcessor extends HTTPAuthenticationRequest
 
     @Override
     public void check() {
-        if (!request.getMethod().equals(HTTPMethod.POST)) {
+        if (request.getMethod() != HTTPMethod.POST) {
             throw new AuthorizationException("Incorrect HTTPMethod");
         }
         super.check();

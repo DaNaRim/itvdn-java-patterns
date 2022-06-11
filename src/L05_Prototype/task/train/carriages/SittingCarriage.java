@@ -23,7 +23,7 @@ public class SittingCarriage extends RailwayCarriage {
 
     private void setModules() {
         CarriageModule module = new SittingModule();
-        for(int i = 0; i < this.getModuleCapacity(); i++) {
+        for (int i = 0; i < this.getModuleCapacity(); i++) {
             this.getModuleArray()[i] = module.getClone();
         }
     }

@@ -3,9 +3,10 @@ package L12_Flyweight;
 import java.awt.*;
 
 public class LegoBrick {
-    private int x;
-    private int y;
-    private LegoType type;
+
+    private final int x;
+    private final int y;
+    private final LegoType type;
 
     public LegoBrick(int x, int y, LegoType type) {
         this.x = x;

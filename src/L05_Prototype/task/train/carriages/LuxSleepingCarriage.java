@@ -20,7 +20,7 @@ public class LuxSleepingCarriage extends RailwayCarriage implements Serializable
 
     private void setModules() {
         CarriageModule module = new LuxSleepingModule();
-        for(int i = 0; i < this.getModuleCapacity(); i++) {
+        for (int i = 0; i < this.getModuleCapacity(); i++) {
             this.getModuleArray()[i] = module.getClone();
         }
     }

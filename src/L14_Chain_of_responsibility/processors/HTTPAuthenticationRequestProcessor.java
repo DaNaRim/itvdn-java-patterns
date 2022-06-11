@@ -4,7 +4,7 @@ import L14_Chain_of_responsibility.domain.HTTPRequest;
 
 public class HTTPAuthenticationRequestProcessor {
 
-    protected HTTPRequest request;
+    protected final HTTPRequest request;
     protected HTTPAuthenticationRequestProcessor nextModifier;
 
     public HTTPAuthenticationRequestProcessor(HTTPRequest request) {

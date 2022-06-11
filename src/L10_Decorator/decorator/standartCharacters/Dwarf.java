@@ -10,9 +10,9 @@ public class Dwarf implements Munchkin {
     private int healthPoints;
 
     public Dwarf() {
-        this.strength = Munchkin.strength + 15;
-        this.magic = Munchkin.magic;
-        this.healthPoints = Munchkin.healthPoints + 5;
+        this.strength = Munchkin.STRENGTH + 15;
+        this.magic = Munchkin.MAGIC;
+        this.healthPoints = Munchkin.HEALTH_POINTS + 5;
     }
 
     @Override
@@ -57,13 +57,13 @@ public class Dwarf implements Munchkin {
     @SuppressWarnings("Duplicates")
     public String fight(Munchkin enemy) {
         while (this.healthPoints > 0) {
-            enemy.setHealthPoints(enemy.getHealthPoints() - this.getStrength());
-            if (enemy.getClass().equals(Warrior.class)
-                    || enemy.getClass().equals(Human.class)
-                    || enemy.getClass().equals(Dwarf.class)) {
-                this.setHealthPoints(this.healthPoints - enemy.getStrength());
+            enemy.setHealthPoints(enemy.getHealthPoints() - this.strength);
+            if (enemy.getClass() == Warrior.class
+                    || enemy.getClass() == Human.class
+                    || enemy.getClass() == Dwarf.class) {
+                this.healthPoints -= enemy.getStrength();
             } else {
-                this.setHealthPoints(this.healthPoints - enemy.getMagic());
+                this.healthPoints -= enemy.getMagic();
             }
         }
         return this.healthPoints > enemy.getHealthPoints() ? "You win!" : "You loose";

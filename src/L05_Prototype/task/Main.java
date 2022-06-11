@@ -54,13 +54,13 @@ public class Main {
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
         ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
 
-        RailwayCarriage cloneLuxSleepingCarriage = (LuxSleepingCarriage)objectInputStream.readObject();
+        RailwayCarriage cloneLuxSleepingCarriage = (LuxSleepingCarriage) objectInputStream.readObject();
 
 
         ByteArrayOutputStream byteArrayOutputStreamModule = new ByteArrayOutputStream();
         ObjectOutputStream objectOutputStreamModule = new ObjectOutputStream(byteArrayOutputStreamModule);
 
-        for(int i = 0; i < luxSleepingCarriage.getModuleArray().length; i++) {
+        for (int i = 0; i < luxSleepingCarriage.getModuleArray().length; i++) {
             objectOutputStreamModule.writeObject(luxSleepingCarriage.getModuleArray()[i]);
         }
 
@@ -69,8 +69,8 @@ public class Main {
         ByteArrayInputStream byteArrayInputStreamModule = new ByteArrayInputStream(byteArrayOutputStreamModule.toByteArray());
         ObjectInputStream objectInputStreamModule = new ObjectInputStream(byteArrayInputStreamModule);
 
-        for(int j = 0; j < luxSleepingCarriage.getModuleArray().length; j++) {
-            CarriageModule module = (LuxSleepingModule)objectInputStreamModule.readObject();
+        for (int j = 0; j < luxSleepingCarriage.getModuleArray().length; j++) {
+            CarriageModule module = (LuxSleepingModule) objectInputStreamModule.readObject();
             cloneLuxSleepingCarriage.getModuleArray()[j] = module;
         }
 

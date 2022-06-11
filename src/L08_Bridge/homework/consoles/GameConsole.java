@@ -7,9 +7,9 @@ import java.util.List;
 
 public abstract class GameConsole {
 
-    protected GameStorage gameStorage;
+    protected final GameStorage gameStorage;
 
-    public GameConsole(GameStorage gameStorage) {
+    protected GameConsole(GameStorage gameStorage) {
         this.gameStorage = gameStorage;
     }
 

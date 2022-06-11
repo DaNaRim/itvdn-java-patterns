@@ -1,6 +1,7 @@
 package L07_Adapter.model;
 
 public class Iron implements SimpleDevice {
+
     @Override
     public void turnOn() {
         System.out.println("Iron is turning on");

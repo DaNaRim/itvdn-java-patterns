@@ -22,9 +22,9 @@ public class LegoType {
     public void draw(Graphics g, int x, int y) {
         Image image;
         try {
-            if (color.equals(Colors.GREEN)) {
+            if (color == Colors.GREEN) {
                 image = ImageIO.read(new File("src/L12_Flyweight/images/lego_green.png"));
-            } else if (color.equals(Colors.RED)) {
+            } else if (color == Colors.RED) {
                 image = ImageIO.read(new File("src/L12_Flyweight/images/Lego_Red.png"));
             } else {
                 image = ImageIO.read(new File("src/L12_Flyweight/images/lego_blue.png"));

@@ -8,7 +8,7 @@ public class TruckDispenser extends iFillingDispenser {
 
     @Override
     protected boolean isCorrectVehicle(Vehicle vehicle) {
-        return vehicle.equals(Vehicle.TRUCK) || vehicle.equals(Vehicle.BUS);
+        return vehicle == Vehicle.TRUCK || vehicle == Vehicle.BUS;
     }
 
     @Override

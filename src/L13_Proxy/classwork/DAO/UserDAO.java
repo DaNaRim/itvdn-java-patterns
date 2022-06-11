@@ -8,7 +8,7 @@ import java.io.*;
 
 public class UserDAO implements IUserDAO {
 
-    private File fileDb;
+    private final File fileDb;
     private FileWriter fileWriter;
     private long idCounter;
 
@@ -24,7 +24,8 @@ public class UserDAO implements IUserDAO {
 
     @Override
     public User saveUser(User user) {
-        user.setId(++idCounter);
+        ++idCounter;
+        user.setId(idCounter);
         try {
             fileWriter.write(user + "\n");
             fileWriter.flush();

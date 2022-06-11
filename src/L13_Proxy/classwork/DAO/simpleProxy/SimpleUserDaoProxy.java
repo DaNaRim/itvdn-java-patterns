@@ -15,9 +15,9 @@ public class SimpleUserDaoProxy extends UserDAO {
         User user = new User();
         user.setId(id);
         user.setName(stringUser.substring(stringUser.indexOf("name='") + 6, stringUser.indexOf("',")));
-        if (mode.equals(SecurityMode.PROTECTED)) {
+        if (mode == SecurityMode.PROTECTED) {
             user.setPassword("***");
-        } else if(mode.equals(SecurityMode.FREE)) {
+        } else if (mode == SecurityMode.FREE) {
             user.setPassword(stringUser.substring(stringUser.indexOf("password='") + 10, stringUser.indexOf("'}")));
         } else {
             user.setId(-1);

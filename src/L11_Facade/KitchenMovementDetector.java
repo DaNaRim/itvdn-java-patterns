@@ -6,7 +6,7 @@ public class KitchenMovementDetector implements MovementDetector {
     private int sensitivity;
 
     public KitchenMovementDetector() {
-        this.sensitivity = MovementDetector.sensitivity;
+        this.sensitivity = MovementDetector.SENSITIVITY;
     }
 
     public boolean isTurnedOn() {

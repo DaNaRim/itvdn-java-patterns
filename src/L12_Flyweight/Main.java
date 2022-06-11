@@ -23,11 +23,11 @@ public class Main {
         System.out.println("LegoBrick size (4700 bytes) * " + LEGO_BRICKS_TO_DRAW);
         System.out.println("+ LegoTypes size (~30 bytes) * " + LEGO_TYPES + "");
         System.out.println("---------------------");
-        System.out.println("Total: " + ((LEGO_BRICKS_TO_DRAW * 470 + LEGO_TYPES * 30) / 1024 / 1024) +
-                "MB (instead of " + ((LEGO_BRICKS_TO_DRAW * 473) / 1024 / 1024) + "MB)");
+        System.out.println("Total: " + (LEGO_BRICKS_TO_DRAW * 470 + LEGO_TYPES * 30) / 1024 / 1024 +
+                " MB (instead of " + LEGO_BRICKS_TO_DRAW * 473 / 1024 / 1024 + " MB)");
     }
 
     private static int random(int min, int max) {
-        return min + (int) (Math.random() * ((max - min) + 1));
+        return min + (int) (Math.random() * (max - min + 1));
     }
 }

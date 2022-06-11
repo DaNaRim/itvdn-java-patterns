@@ -12,7 +12,7 @@ public enum BookShelf {
 
     INSTANCE;
 
-    ArrayList<Book> books = new ArrayList<>();
+    public final ArrayList<Book> books = new ArrayList<>();
 
     BookShelf() {
     }

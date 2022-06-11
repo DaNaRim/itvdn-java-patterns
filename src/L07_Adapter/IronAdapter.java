@@ -5,7 +5,7 @@ import L07_Adapter.model.SimpleDevice;
 
 public class IronAdapter implements SimpleDevice {
 
-    Aircraft aircraft;
+    private final Aircraft aircraft;
 
     public IronAdapter(Aircraft aircraft) {
         this.aircraft = aircraft;

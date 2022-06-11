@@ -1,7 +1,8 @@
 package L11_Facade;
 
 public interface MovementDetector {
-    int sensitivity = 40;
+
+    int SENSITIVITY = 40;
 
     void on();
 

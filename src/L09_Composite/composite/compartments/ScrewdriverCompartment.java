@@ -5,7 +5,7 @@ import L09_Composite.composite.tools.Tools;
 
 public class ScrewdriverCompartment implements iToolCompartment {
 
-    Tools tool = Tools.SCREWDRIVER;
+    private final Tools tool = Tools.SCREWDRIVER;
 
     @Override
     public void printToolCompartmentAssignment() {

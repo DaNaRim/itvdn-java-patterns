@@ -6,7 +6,7 @@ public class HallMovementDetector implements MovementDetector {
     private int sensitivity;
 
     public HallMovementDetector() {
-        this.sensitivity = MovementDetector.sensitivity;
+        this.sensitivity = MovementDetector.SENSITIVITY;
     }
 
     public boolean isTurnedOn() {

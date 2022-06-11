@@ -31,6 +31,7 @@ public class Pizza {
     }
 
     public static final class Builder {
+
         private String name;
         private double price;
         private PizzaSize size;

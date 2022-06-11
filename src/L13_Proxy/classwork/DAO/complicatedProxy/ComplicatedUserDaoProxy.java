@@ -25,16 +25,15 @@ public class ComplicatedUserDaoProxy {
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 if (needProxy(method)) {
                     return proxyMethod(method, args);
-                } else {
-                    return method.invoke(userDAO, args);
                 }
+                return method.invoke(userDAO, args);
             }
 
             private boolean needProxy(Method method) {
                 try {
                     Method userDaoMethod = userDAO.getClass().getMethod(method.getName(), method.getParameterTypes());
                     return Stream.of(userDaoMethod.getAnnotations())
-                            .anyMatch(annotation -> annotation.annotationType().equals(RequestProxy.class));
+                            .anyMatch(annotation -> annotation.annotationType() == RequestProxy.class);
                 } catch (NoSuchMethodException | SecurityException ex) {
                     throw new RuntimeException();
                 }

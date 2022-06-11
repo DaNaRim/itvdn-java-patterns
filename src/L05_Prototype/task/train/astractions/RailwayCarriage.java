@@ -12,14 +12,14 @@ public abstract class RailwayCarriage {
     private int floorQuantity;
     private CarriageModule[] moduleArray;
 
-    public RailwayCarriage() {
+    protected RailwayCarriage() {
         this.floorQuantity = 1;
         this.lavatoryQuantity = 2;
         this.moduleCapacity = 9;
         this.moduleArray = new CarriageModule[moduleCapacity];
     }
 
-    public RailwayCarriage(int floorQuantity) {
+    protected RailwayCarriage(int floorQuantity) {
         if (floorQuantity == 1) {
             this.floorQuantity = 1;
             this.lavatoryQuantity = 2;
@@ -36,7 +36,7 @@ public abstract class RailwayCarriage {
 
     }
 
-    public RailwayCarriage(RailwayCarriage resourceCarriage) {
+    protected RailwayCarriage(RailwayCarriage resourceCarriage) {
         if (resourceCarriage != null) {
             this.lavatoryQuantity = resourceCarriage.getLavatoryQuantity();
             this.moduleCapacity = resourceCarriage.getModuleCapacity();
@@ -80,13 +80,10 @@ public abstract class RailwayCarriage {
     public abstract RailwayCarriage getClone();
 
     @Override
-    public String toString() {
-        return "RailwayCarriage{" +
-                "lavatoryQuantity=" + lavatoryQuantity +
-                ", moduleCapacity=" + moduleCapacity +
-                ", floorQuantity=" + floorQuantity +
-                ", moduleArray=" + Arrays.toString(moduleArray) +
-                '}';
+    public int hashCode() {
+        int result = Objects.hash(lavatoryQuantity, moduleCapacity, floorQuantity);
+        result = 31 * result + Arrays.hashCode(moduleArray);
+        return result;
     }
 
     @Override
@@ -101,9 +98,12 @@ public abstract class RailwayCarriage {
     }
 
     @Override
-    public int hashCode() {
-        int result = Objects.hash(lavatoryQuantity, moduleCapacity, floorQuantity);
-        result = 31 * result + Arrays.hashCode(moduleArray);
-        return result;
+    public String toString() {
+        return "RailwayCarriage{" +
+                "lavatoryQuantity=" + lavatoryQuantity +
+                ", moduleCapacity=" + moduleCapacity +
+                ", floorQuantity=" + floorQuantity +
+                ", moduleArray=" + Arrays.toString(moduleArray) +
+                '}';
     }
 }

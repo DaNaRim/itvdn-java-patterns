@@ -5,7 +5,7 @@ import L09_Composite.composite.tools.Tools;
 
 public class SpannerCompartment implements iToolCompartment {
 
-    Tools tool = Tools.SPANNER;
+    private final Tools tool = Tools.SPANNER;
 
     @Override
     public void printToolCompartmentAssignment() {

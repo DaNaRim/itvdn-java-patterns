@@ -8,13 +8,13 @@ import java.util.List;
 
 public class SuperGamesCartridge extends GameCartridge {
 
-    private static final List<Game> games = List.of(
+    private static final List<Game> GAMES = List.of(
             new Minecraft(),
             new NeedForSpeed()
     );
 
     @Override
     public List<Game> getGamesList() {
-        return games;
+        return GAMES;
     }
 }

@@ -6,7 +6,7 @@ import L10_Decorator.decorator.standartCharacters.Human;
 
 public class Wizard implements Munchkin {
 
-    private Munchkin wizard;
+    private final Munchkin wizard;
 
     public Wizard(Munchkin wizard) {
         this.wizard = wizard;
@@ -56,9 +56,9 @@ public class Wizard implements Munchkin {
     public String fight(Munchkin enemy) {
         while (wizard.getHealthPoints() > 0) {
             enemy.setHealthPoints(enemy.getHealthPoints() - wizard.getMagic());
-            if (enemy.getClass().equals(Warrior.class)
-                    || enemy.getClass().equals(Human.class)
-                    || enemy.getClass().equals(Dwarf.class)) {
+            if (enemy.getClass() == Warrior.class
+                    || enemy.getClass() == Human.class
+                    || enemy.getClass() == Dwarf.class) {
                 wizard.setHealthPoints(wizard.getHealthPoints() - enemy.getStrength());
             } else {
                 wizard.setHealthPoints(wizard.getHealthPoints() - enemy.getMagic());

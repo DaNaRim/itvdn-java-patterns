@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ToolBox implements iToolCompartment {
 
-    private List<iToolCompartment> toolCompartments;
+    private final List<iToolCompartment> toolCompartments;
 
     public ToolBox() {
         this.toolCompartments = new ArrayList<>();

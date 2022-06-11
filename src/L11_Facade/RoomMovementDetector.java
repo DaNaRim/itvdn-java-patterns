@@ -6,7 +6,7 @@ public class RoomMovementDetector implements MovementDetector {
     private int sensitivity;
 
     public RoomMovementDetector() {
-        this.sensitivity = MovementDetector.sensitivity;
+        this.sensitivity = MovementDetector.SENSITIVITY;
     }
 
     public boolean isTurnedOn() {

@@ -6,7 +6,7 @@ import L09_Composite.composite.compartments.ScrewdriverCompartment;
 import L09_Composite.composite.compartments.SpannerCompartment;
 
 public class Main {
-    
+
     public static void main(String[] args) {
         ToolBox toolBox = new ToolBox();
         toolBox.printToolCompartmentAssignment();
