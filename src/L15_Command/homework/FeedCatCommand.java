@@ -4,13 +4,13 @@ public class FeedCatCommand implements Command {
 
     private static final CatFeeder feeder = new CatFeeder();
 
-    private int amountOfFoodInTheFeeder;
-    private int amountOfFoodInTheBowl;
+    private int amountOfFoodInFeeder;
+    private int amountOfFoodInBowl;
     private long lastFeedTime;
 
     public boolean execute() {
-        amountOfFoodInTheBowl = feeder.getAmountOfFoodInTheBowl();
-        amountOfFoodInTheFeeder = feeder.getAmountOfFoodInTheFeeder();
+        amountOfFoodInBowl = feeder.getAmountOfFoodInBowl();
+        amountOfFoodInFeeder = feeder.getAmountOfFoodInFeeder();
         lastFeedTime = feeder.getLastFeedTime();
         return feeder.feedCat();
     }
@@ -18,8 +18,8 @@ public class FeedCatCommand implements Command {
     @Override
     public String toString() {
         return "FeedCatCommand{" +
-                "amountOfFoodInTheFeeder=" + amountOfFoodInTheFeeder +
-                ", amountOfFoodInTheBowl=" + amountOfFoodInTheBowl +
+                "amountOfFoodInFeeder=" + amountOfFoodInFeeder +
+                ", amountOfFoodInBowl=" + amountOfFoodInBowl +
                 ", lastFeedTime=" + lastFeedTime +
                 '}';
     }
