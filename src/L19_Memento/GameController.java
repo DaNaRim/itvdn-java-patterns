@@ -8,12 +8,12 @@ public class GameController {
         final SaveCard card = new SaveCard();
         BattleTank tank = new BattleTank();
 
-        String strMethod;
         Scanner reader = new Scanner(System.in);
+
         System.out.print("Enter the action: ");
+        String strMethod = reader.nextLine();
 
-        while (!(strMethod = reader.nextLine()).equals("exit")) {
-
+        while (!strMethod.equals("exit")) {
             switch (strMethod) {
                 case "infantry" -> tank.attackInfantry();
                 case "armored" -> tank.armoredVehicleAttack();
@@ -25,15 +25,15 @@ public class GameController {
                 case "load" -> {
                     System.out.print("Enter the index of save: ");
                     strMethod = reader.nextLine();
-                    if (strMethod.equals("back")) {
-                        break;
-                    }
+                    if (strMethod.equals("back")) break;
+
                     tank.loadGame(card.loadSave(Integer.parseInt(strMethod)));
                 }
                 default -> System.out.println("Wrong action input! Try again");
             }
             System.out.println();
             System.out.print("Enter the action: ");
+            strMethod = reader.nextLine();
         }
         reader.close();
     }
