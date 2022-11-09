@@ -6,6 +6,7 @@ import java.io.Serializable;
 public class Singleton implements Serializable {
 
     private static volatile Singleton instance;
+
     private int num = 4;
 
     private Singleton() {
@@ -16,14 +17,14 @@ public class Singleton implements Serializable {
 
     public static Singleton getInstance() {
         if (instance == null) synchronized (Singleton.class) {
-            instance = new Singleton();
+            if (instance == null) instance = new Singleton();
         }
         return instance;
     }
 
     @Serial
     protected Object readResolve() {
-        return instance;
+        return getInstance();
     }
 
     public int getNum() {
